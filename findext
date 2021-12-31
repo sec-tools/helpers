@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# looks for all files with specified extension in current directory and copies them into a folder
+#
+# eg. findext svg 
+#
+
+mkdir -p "$1-files"
+find . -type f -name "*.$1" -exec cp {} "$1-files" \; 2>/dev/null
