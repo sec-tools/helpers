@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# get a command line GUI diff of two binary files
+#
+# eg. diffx changed.bin original.bin
+#
+
+vimdiff <(xxd $1) <(xxd $2)
