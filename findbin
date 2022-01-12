@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# find all binary executables or files that look as such (eg. shell scripts with no extensions)
+#
+# eg. findbin .
+#
+find "$1" -type f -executable | xargs file -i | grep "x-" | cut -d":" -f1 | cut -c3- | grep -v "\\."
